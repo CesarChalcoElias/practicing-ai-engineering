@@ -1,0 +1,24 @@
+[project]
+name = "week-01"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Cesar Chalco",email = "cesarchalcoelias@gmail.com"}
+]
+requires-python = ">=3.10"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)",
+    "pytest-asyncio (>=1.4.0,<2.0.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "openai (>=3.14.1,<4.0.0)",
+    "pydantic (>=2.13.5,<3.0.0)"
+]
