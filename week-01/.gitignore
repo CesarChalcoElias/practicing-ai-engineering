@@ -46,3 +46,6 @@ htmlcov/
 .vscode/
 .idea/
 .DS_Store
+
+# Local coding-agent guidance
+AGENTS.md

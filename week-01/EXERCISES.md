@@ -83,6 +83,40 @@ The exercise is complete when:
 - The exact model identifier is observable.
 - A second hypothetical provider could implement the same application-facing contract.
 
+### Follow-up: Verify the Contract with a Second Provider
+
+After the single-provider adapter works, implement a second provider adapter as a contract exercise. You may use another provider you have access to, or a deterministic fake provider if you want to avoid another live API call.
+
+The second adapter must:
+
+- Implement the same application-facing operation as the first adapter.
+- Accept the same typed request.
+- Return the same typed result.
+- Keep its provider SDK calls and response parsing inside its own adapter.
+- Use its own configured API credential and model identifier.
+- Leave application calling code unchanged when the selected provider changes.
+
+Do not add fallback logic, provider competition, routing heuristics, or a provider abstraction framework. The purpose is to test whether your contract is genuinely provider-independent.
+
+#### Follow-up Questions
+
+- What code remained unchanged when you switched providers?
+- Which fields required provider-specific translation?
+- Did either provider omit token usage or return it in a different shape?
+- Which assumptions in the first adapter were accidentally provider-specific?
+- Where should provider selection occur, and where should it not occur?
+
+#### Follow-up Acceptance Criteria
+
+The follow-up is complete when:
+
+- Two adapters satisfy the same application-facing contract.
+- The same request model can be sent through either adapter.
+- The same result model is returned by either adapter.
+- Application code does not import either provider SDK.
+- Provider selection can change through configuration or adapter construction rather than application logic changes.
+- At least one provider-specific difference is documented and contained inside its adapter.
+
 ### Reflection
 
 Write 3 to 5 sentences answering:
