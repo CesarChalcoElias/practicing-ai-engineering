@@ -28,6 +28,7 @@ htmlcov/
 # Environment files
 .env
 .env.*
+!.env.example
 
 # Data files
 *.csv
