@@ -1,7 +1,9 @@
 # Practicing AI Engineering
 
-A hands-on lab for building AI systems and learning the theory behind them.
+This is a personal space for learning AI engineering by building things at home.
 
-This repo is where concepts become working software: provider boundaries, reliable LLM interfaces, structured outputs, evaluation, and observability.
+I’m using this repo to explore the ideas behind AI applications, write some code, break a few things, and gradually get a better feel for how all the pieces fit together.
 
-Build it. Understand it. Make it reliable.
+There will be exercises, experiments, notes, and probably a few questionable decisions along the way. That’s part of the fun of building things.
+
+Usually done from home, with coffee on the desk and French fries in the air fryer.
