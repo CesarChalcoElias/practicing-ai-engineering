@@ -1,0 +1,35 @@
+set dotenv-load := true
+
+help:
+    @echo "Available commands:"
+    @echo "  just lint                    Run Ruff lint checks"
+    @echo "  just format                  Format Python files with Ruff"
+    @echo "  just format-check           Verify formatting without changing files"
+    @echo "  just check                   Run lint and format checks"
+    @echo "  just add package=PACKAGE    Add a Poetry package"
+    @echo "  just add-dev package=PACKAGE Add a Poetry development package"
+    @echo "  just remove package=PACKAGE Remove a Poetry package"
+    @echo "  just remove-dev package=PACKAGE Remove a Poetry development package"
+
+lint:
+    poetry run ruff check .
+
+format:
+    poetry run ruff format .
+
+format-check:
+    poetry run ruff format --check .
+
+check: lint format-check
+
+add package:
+    poetry add "{{package}}"
+
+add-dev package:
+    poetry add --group dev "{{package}}"
+
+remove package:
+    poetry remove "{{package}}"
+
+remove-dev package:
+    poetry remove --group dev "{{package}}"

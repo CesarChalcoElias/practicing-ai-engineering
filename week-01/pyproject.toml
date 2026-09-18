@@ -5,7 +5,7 @@ description = ""
 authors = [
     {name = "Cesar Chalco",email = "cesarchalcoelias@gmail.com"}
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.10,<4.0"
 dependencies = [
 ]
 
@@ -20,5 +20,22 @@ dev = [
     "pytest-asyncio (>=1.4.0,<2.0.0)",
     "httpx (>=0.28.1,<0.29.0)",
     "openai (>=3.14.1,<4.0.0)",
-    "pydantic (>=2.13.5,<3.0.0)"
+    "pydantic (>=2.13.5,<3.0.0)",
+    "cohere (>=7.1.1,<8.0.0)",
+    "groq (>=1.7.0,<2.0.0)",
+    "mistralai (>=2.10.1,<3.0.0)",
+    "ruff (>=0.13.0,<0.14.0)"
 ]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+extend-exclude = [".venv", "build", "dist"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
