@@ -3,6 +3,7 @@ from enum import Enum
 from typing import Annotated, Optional
 from pydantic import BaseModel, Field, StringConstraints
 
+
 class RequestStatus(str, Enum):
     PENDING = "pending"
     PROCESSING = "processing"
